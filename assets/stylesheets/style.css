@@ -1,5 +1,6 @@
 :root {
-    --primary-Color : rgb(91,176,29)
+    --primary-Color : rgb(91,176,29);
+    --body-color : rgb(243,243,243);
 }
 
 html, body, div, span, applet, object, iframe,
@@ -109,6 +110,9 @@ table {
 
 
 /* common css */
+ body {
+     background-color: var(--body-color);
+ }
 a {
     text-decoration: none;
 }
@@ -141,6 +145,9 @@ main {
     color: var(--primary-Color);
 }
 
+main .active {
+    background-color: var(--primary-Color);
+}
 /* buttons */
 .btn {
     padding: 0.5rem 1.2rem;
@@ -207,13 +214,15 @@ main {
 .data-display{
     color: white;
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 900;
     margin: 2rem auto;
     padding: 1rem;
 
 }
 .data-display h6 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
 }
 
 /* basic info */
@@ -240,11 +249,29 @@ main {
  .product {
      height: 18rem;
      border: 2px solid var(--primary-Color);
-     min-width: 22%;
-     margin: 1rem;
+     outline: 12px solid white;
+     min-width: 18%;
+     padding: 5px;
+     margin: 2rem;
+     background-color: white;
+     box-shadow: 0px 10px 12px 10px rgb(148, 146, 146);
  }
+ .product img{
+     color : green;
+     font-weight :900;
+     font-size: 2.5rem;
+     text-align: center;
 
+ }
+ 
 
+ .dot {
+     width: 20px;
+     height: 20px;
+     background-color: rgb(177, 174, 174);
+     margin: 1rem;
+     border-radius: 50%;
+ }
 
 
  .underline-heading{
@@ -261,6 +288,27 @@ main {
     border: 2px solid var(--primary-Color);
     min-width: 17%;
     margin: 1rem;
+    background-color: white;
+}
+/* testimonials */
+.testimonials {
+    border: 2px solid var(--primary-Color);
+    outline: 12px solid white;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: white;
+    box-shadow: 0px 10px 12px 10px rgb(148, 146, 146);
+}
+.testimonials p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.client-pic {
+    min-width: 11rem;
+    margin: 0 3rem 0 0 ;
+    height: 11rem;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px 5px rgb(170, 167, 167);
 }
 
 /* client */
@@ -269,8 +317,58 @@ main {
     border: 2px solid var(--primary-Color);
     min-width: 17%;
     margin: 1rem;
+    background-color: white;
 }
+
+/* contact-form */
+.wrap {
+    flex-wrap: wrap;
+}
+.contact-form input {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    flex: 0 1 27%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.contact-form textarea {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
 /* footer */
 footer{
     background-color: var(--primary-Color);
+}
+
+footer a {
+    font-size: 1.5rem;
+    color: white;
+}
+footer h4{
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 5.5rem 0 1rem 0;
+    color: white;
+}
+footer input{
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    flex-direction: 0 1 50%;
+    min-width: 50%;
+    
+}
+
+footer button {
+    padding: 0.5rem 1.5rem;
+    color: white;
+    background-color: var(--primary-Color);
+    border: none;
+    margin-left:-110px ;
+    border-radius: 5px;
+    font-size: 1rem;
 }
